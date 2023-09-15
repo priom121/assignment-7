@@ -4,7 +4,7 @@ import { FaBookOpen } from 'react-icons/fa';
 const Card = ({card , handleClickBtn }) => {
  const {image ,course_name ,details , price , credit} = card ;
  return (
-  <div >
+  <div className='flex'>
        <div className="card py-5  card-compact w-80  h-[412px]  bg-base-100 shadow-xl">
   <figure><img className='' src={image} alt="Shoes" /></figure>
   <div className="card-body">
@@ -12,13 +12,14 @@ const Card = ({card , handleClickBtn }) => {
     <p className='text-base'>{details}</p>
     <div className='flex gap-20'>
        <h2 className='text-2xl font-semibold'>$ {price}</h2>
-       <p className='flex ml gap-2 text-xl font-semibold'><FaBookOpen></FaBookOpen> credit :{credit}hr</p>
+       <button className='flex gap-2  text-xl font-semibold'><FaBookOpen></FaBookOpen> credit :{credit}hr </button>
     </div>
     <div className="card-actions ">
-    <button onClick={ ()=>handleClickBtn(card)} className="btn btn-info px-28">Select</button>
+    <button onClick={()=>handleClickBtn(card)  } className="btn btn-info px-28">Select</button>
     </div>
   </div>
-</div>                                                                                   
+</div> 
+                                                                                  
  </div>
 );
 };
